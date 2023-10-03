@@ -9,7 +9,7 @@ function GameScreen(props) {
         <Text>Higher or lower?</Text>
         {/* + - */}
       </View>
-      <View>LOG ROUNDS</View>
+      {/* <View>LOG ROUNDS</View> */}
     </View>
   );
 }
