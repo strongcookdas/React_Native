@@ -3,13 +3,19 @@ import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
 import { useState } from "react";
 
-function renderCagtegoryItem(itemData) {
-  return (
-    <CategoryGridTile title={itemData.item.title} color={itemData.item.color} />
-  );
-}
-
-function CategoriesScreen(props) {
+function CategoriesScreen({ navigation }) {
+  function renderCagtegoryItem(itemData) {
+    function pressHandler() {
+      navigation.navigate("MealsOverview");
+    }
+    return (
+      <CategoryGridTile
+        title={itemData.item.title}
+        color={itemData.item.color}
+        onPress={pressHandler}
+      />
+    );
+  }
   const [numColumns, setNumColumns] = useState(2);
 
   return (
