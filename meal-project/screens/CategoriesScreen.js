@@ -6,7 +6,9 @@ import { useState } from "react";
 function CategoriesScreen({ navigation }) {
   function renderCagtegoryItem(itemData) {
     function pressHandler() {
-      navigation.navigate("MealsOverview");
+      navigation.navigate("MealsOverview", {
+        categoryId: itemData.item.id,
+      });
     }
     return (
       <CategoryGridTile

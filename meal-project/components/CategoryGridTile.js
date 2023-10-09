@@ -1,8 +1,4 @@
-import { Text } from "react-native";
-import { Platform } from "react-native";
-import { StyleSheet } from "react-native";
-import { Pressable } from "react-native";
-import { View } from "react-native";
+import { Text, View, Platform, StyleSheet, Pressable } from "react-native";
 
 function CategoryGridTile({ title, color, onPress }) {
   return (
